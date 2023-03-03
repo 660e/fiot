@@ -1,13 +1,11 @@
 <template>
-  <div class="fullscreen bg-dark flex flex-center">
-    <h1 class="text-white">login</h1>
-  </div>
+  <div>layouts</div>
 </template>
 
 <script>
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'app-login'
+  name: 'app-layouts'
 });
 </script>
