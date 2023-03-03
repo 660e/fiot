@@ -1,7 +1,11 @@
 <template>
   <div class="fullscreen bg-dark">
     <canvas id="particles"></canvas>
-    <div class="fullscreen absolute flex flex-center text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, ipsum.</div>
+    <div class="fullscreen absolute text-white flex">
+      <div class="col">
+        <fui-double></fui-double>
+      </div>
+    </div>
   </div>
 </template>
 
