@@ -19,6 +19,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .fui-double {
   position: relative;
+  display: flex;
   .fui-double__top,
   .fui-double__bottom {
     width: 100%;
@@ -50,8 +51,10 @@ export default defineComponent({
     animation: bottom 0.5s forwards;
   }
   .fui-double__slot {
+    flex: 1;
     opacity: 0;
     animation: slot 0.1s 0.5s 4 forwards;
+    display: flex;
   }
 }
 @keyframes top {
