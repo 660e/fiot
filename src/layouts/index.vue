@@ -2,8 +2,12 @@
   <div class="fullscreen bg-dark">
     <canvas id="particles"></canvas>
     <div class="fullscreen absolute text-white flex">
-      <div class="col">
-        <fui-double></fui-double>
+      <div class="col q-px-lg q-py-md">
+        <div class="flex">
+          <fui-double class="text-h5 text-center q-py-sm">FIOT</fui-double>
+          <fui-double class="col text-h5 text-center q-py-sm q-mx-xl">MENU</fui-double>
+          <fui-double class="text-h5 text-center q-py-sm">INFO</fui-double>
+        </div>
       </div>
     </div>
   </div>
