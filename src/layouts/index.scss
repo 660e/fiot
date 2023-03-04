@@ -1,0 +1,52 @@
+.menu {
+  position: relative;
+  &:hover {
+    &::before,
+    &::after {
+      content: '';
+      border: 8px transparent solid;
+      transform: translateY(-50%);
+      position: absolute;
+      top: 50%;
+      z-index: 1;
+    }
+    &::before {
+      border-right-color: $primary;
+      left: 0;
+      animation: left 0.3s forwards;
+    }
+    &::after {
+      border-left-color: $primary;
+      right: 0;
+      animation: right 0.3s forwards;
+    }
+    & > span {
+      position: relative;
+      &::after {
+        content: '';
+        background-color: $light-dimmed-background;
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: -7px;
+      }
+    }
+  }
+}
+@keyframes left {
+  50% {
+    left: -28px;
+  }
+  100% {
+    left: -24px;
+  }
+}
+@keyframes right {
+  50% {
+    right: -28px;
+  }
+  100% {
+    right: -24px;
+  }
+}

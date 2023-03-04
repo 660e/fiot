@@ -7,10 +7,16 @@
           <fui-double>
             <div class="flex items-center q-pa-sm">
               <q-img src="~assets/logo.svg" width="36px" />
-              <div class="text-h5 q-pl-sm">FIOT</div>
+              <div class="text-h5 q-pl-sm">Futuristic Internet of Things</div>
             </div>
           </fui-double>
-          <fui-double class="col q-mx-xl">MENU</fui-double>
+          <fui-double class="col q-mx-xl">
+            <div class="flex items-center">
+              <div v-for="m in menu" :key="m" class="text-subtitle1 q-mx-lg cursor-pointer menu">
+                <span>{{ m.label }}</span>
+              </div>
+            </div>
+          </fui-double>
           <fui-double>
             <div class="flex items-center q-px-sm">
               <q-icon class="cursor-pointer" name="notifications_none" size="24px" />
@@ -31,13 +37,18 @@
 </template>
 
 <script>
-import { defineComponent, onMounted } from 'vue';
+import { defineComponent, onMounted, ref } from 'vue';
 import Particles from 'particlesjs';
 
 export default defineComponent({
   name: 'app-layouts',
 
   setup() {
+    const menu = ref([
+      { label: '照明面板', value: '/' },
+      { label: '智能插座', value: '/' }
+    ]);
+
     onMounted(() => {
       Particles.init({
         selector: '#particles',
@@ -45,6 +56,10 @@ export default defineComponent({
         connectParticles: true
       });
     });
+
+    return { menu };
   }
 });
 </script>
+
+<style src="./index.scss" lang="scss" scoped></style>
