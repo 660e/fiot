@@ -18,6 +18,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .fui-double {
+  padding-bottom: 5px;
   position: relative;
   display: flex;
   .fui-double__top,
@@ -55,6 +56,14 @@ export default defineComponent({
     opacity: 0;
     animation: slot 0.1s 0.5s 4 forwards;
     display: flex;
+    &::after {
+      background-color: $separator-dark-color;
+      content: '';
+      height: 1px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+    }
   }
 }
 @keyframes top {
@@ -106,7 +115,7 @@ export default defineComponent({
     bottom: calc(50% - 1px);
   }
   100% {
-    bottom: 0;
+    bottom: 5px;
   }
 }
 @keyframes line {

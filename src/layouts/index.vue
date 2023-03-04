@@ -2,8 +2,8 @@
   <div class="fullscreen bg-dark">
     <canvas id="particles"></canvas>
     <div class="fullscreen absolute text-white flex">
-      <div class="col q-px-lg q-py-md">
-        <div class="flex">
+      <div class="col q-px-lg q-py-md flex column">
+        <div class="flex q-pb-md">
           <fui-double>
             <div class="flex items-center q-pa-sm">
               <q-img src="~assets/logo.svg" width="36px" />
@@ -22,7 +22,9 @@
             </div>
           </fui-double>
         </div>
-        <div></div>
+        <div class="col flex">
+          <router-view />
+        </div>
       </div>
     </div>
   </div>
