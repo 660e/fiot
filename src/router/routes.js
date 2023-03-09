@@ -1,7 +1,20 @@
 const routes = [
   {
     path: '/',
-    component: () => import('pages')
+    redirect: 'login',
+    component: () => import('layouts'),
+    children: [
+      {
+        path: '/home',
+        name: 'home',
+        component: () => import('pages')
+      },
+      {
+        path: '/lighting',
+        name: 'lighting',
+        component: () => import('pages/lighting')
+      }
+    ]
   },
   {
     path: '/login',
@@ -12,11 +25,6 @@ const routes = [
     path: '/dashboard',
     name: 'dashboard',
     component: () => import('pages/dashboard')
-  },
-  {
-    path: '/home',
-    component: () => import('layouts'),
-    children: []
   },
 
   // Always leave this as last one,

@@ -5,9 +5,14 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
+import { defineComponent, onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
-  name: 'app-login'
+  name: 'app-login',
+
+  setup() {
+    onMounted(() => useRouter().push({ name: 'home' }));
+  }
 });
 </script>

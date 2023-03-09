@@ -11,8 +11,8 @@
             </div>
           </fui-double>
           <fui-double class="col q-mx-xl">
-            <div class="flex items-center">
-              <div v-for="m in menu" :key="m" class="text-subtitle1 q-mx-lg cursor-pointer menu">
+            <div class="flex items-center q-px-sm">
+              <div v-for="m in menu" :key="m" class="text-subtitle1 q-mx-md cursor-pointer menu">
                 <span>{{ m.label }}</span>
               </div>
             </div>
@@ -45,8 +45,13 @@ export default defineComponent({
 
   setup() {
     const menu = ref([
-      { label: '照明面板', value: '/' },
-      { label: '智能插座', value: '/' }
+      { label: '首页', value: 'home' },
+      { label: '配电照明系统', value: '/' },
+      { label: '给排水系统', value: '/' },
+      { label: '暖通空调系统', value: '/' },
+      { label: '统计分析', value: '/' },
+      { label: '告警管理', value: '/' },
+      { label: '批量任务', value: '/' }
     ]);
 
     onMounted(() => {
