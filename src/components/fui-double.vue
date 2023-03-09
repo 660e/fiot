@@ -33,12 +33,12 @@ export default defineComponent({
     &::after {
       content: '';
       display: block;
-      background-color: #fff;
+      background-color: $grey-5;
       height: 3px;
       width: 5px;
     }
     b {
-      background-color: $light-dimmed-background;
+      background-color: $grey-5;
       height: 1px;
       animation: line 0.5s forwards;
     }
@@ -57,7 +57,7 @@ export default defineComponent({
     animation: slot 0.1s 0.5s 4 forwards;
     display: flex;
     &::after {
-      background-color: $separator-dark-color;
+      background-color: $grey-9;
       content: '';
       height: 1px;
       width: 100%;

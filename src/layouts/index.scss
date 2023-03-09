@@ -1,4 +1,6 @@
 .menu {
+  color: $grey-5;
+  font-weight: 700;
   position: relative;
   &:hover {
     &::before,
@@ -11,20 +13,21 @@
       z-index: 1;
     }
     &::before {
-      border-right-color: $primary;
+      border-right-color: $negative;
       left: 0;
       animation: left 0.3s forwards;
     }
     &::after {
-      border-left-color: $primary;
+      border-left-color: $negative;
       right: 0;
       animation: right 0.3s forwards;
     }
     & > span {
+      color: $grey-1;
       position: relative;
       &::after {
         content: '';
-        background-color: $light-dimmed-background;
+        background-color: $grey-1;
         height: 1px;
         width: 100%;
         position: absolute;
