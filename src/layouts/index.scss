@@ -26,6 +26,7 @@
     & > span {
       color: $grey-1;
       position: relative;
+      animation: $a-blink;
       &::after {
         content: '';
         background-color: $grey-1;
