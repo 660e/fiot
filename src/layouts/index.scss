@@ -2,7 +2,8 @@
   color: $grey-5;
   font-weight: 700;
   position: relative;
-  &:hover {
+  &:hover,
+  &.active {
     &::before,
     &::after {
       content: '';

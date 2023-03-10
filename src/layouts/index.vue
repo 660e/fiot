@@ -11,8 +11,14 @@
             </div>
           </fui-double>
           <fui-double class="col q-mx-xl">
-            <div class="flex items-center q-px-sm">
-              <div v-for="m in menu" :key="m" class="text-subtitle1 q-mx-md cursor-pointer menu">
+            <div class="flex items-center q-pl-xl">
+              <div
+                v-for="m in menu"
+                :key="m"
+                :class="{ active: $route.name === m.value }"
+                @click="$router.push(m.value)"
+                class="text-subtitle1 q-mr-xl cursor-pointer menu"
+              >
                 <span>{{ m.label }}</span>
               </div>
             </div>
@@ -46,7 +52,7 @@ export default defineComponent({
   setup() {
     const menu = ref([
       { label: '首页', value: 'home' },
-      { label: '配电照明系统', value: '/' },
+      { label: '配电照明系统', value: 'lighting' },
       { label: '给排水系统', value: '/' },
       { label: '暖通空调系统', value: '/' },
       { label: '统计分析', value: '/' },
@@ -62,9 +68,11 @@ export default defineComponent({
       });
     });
 
-    return { menu };
+    return {
+      menu
+    };
   }
 });
 </script>
 
-<style src="./index.scss" lang="scss" scoped></style>
+<style src="./index.scss" lang="scss" scoped />
